@@ -1,0 +1,12 @@
+@use "styles/abstracts" as *;
+
+.type {
+  display: block;
+}
+
+@each $type, $color in $types {
+  .type-#{$type} {
+    composes: type;
+    background-color: $color;
+  }
+}
